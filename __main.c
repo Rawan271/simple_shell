@@ -35,6 +35,6 @@ exit(1); } /* Fork error */
 else
 { /* Parent process */
 waitpid(pid, &status, 0);
-} /* end of parent process */
-return (0);
-} /*end of main*/
+} }
+return (0); /*end of main*/
+}
