@@ -1,0 +1,31 @@
+#include <shell.h>
+
+int main(char command[MAX_COMMAND_LENGTH],
+    char *token)
+{
+    while (1) {
+        printf("$ ");
+        fflush(stdout);
+
+        if (fgets(command, MAX_COMMAND_LENGTH, stdin) == NULL) {
+            break;
+        }
+
+        // Remove newline character from input
+        command[strcspn(command, "\n")] = '\0';
+
+        // Ignore comments
+        token = strtok(command, "#");
+        if (token == NULL) {
+            continue;
+        }
+
+        // Print PID before executing command
+        printf("%d\n", getpid());
+
+        // Execute command
+        system(token);
+    }
+
+    return 0;
+}
