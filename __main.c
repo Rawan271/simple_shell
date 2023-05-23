@@ -19,8 +19,7 @@ args[i] = strtok(line, " \n");
 while (args[i] != NULL && i < MAX_ARGS - 1)
 {i++;
 args[i] = strtok(NULL, " \n"); }
-args[i] = NULL;
-/* Check for built-in commands */
+args[i] = NULL; /* Check for built-in commands */
 if (strcmp(args[0], "exit") == 0)
 { exit(0); } /* Fork a child process to execute the command */
 pid = fork();
