@@ -13,7 +13,7 @@
 #include <errno.h>
 
 
-#define MAX_INPUT_LENGTH 1024
+#define MAX_COMMAND_LENGTH 1024
 #define MAX_ARGS 64
 
 /* Function prototypes */
