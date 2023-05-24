@@ -17,10 +17,16 @@
 #define MAX_ARGS 64
 
 /* Function prototypes */
+int execute_command(char **args);
+int execute_pipeline(char **args, int num_args);
+int parse_pipeline(char *line, char **args);
+int parse_args(char *line, char **args);
+int is_logical_operator(char *token);
+int run_logical_operator(char **args, int num_args, int operator_pos);
+
 void print_prompt(void);
 void read_input(char *input);
 void parse_input(char *input, char **args);
-void execute_command(char **args);
 int is_builtin(char *command);
 void handle_builtin(char **args);
 void handle_external(char **args);
