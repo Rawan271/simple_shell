@@ -8,7 +8,7 @@
  */
 char *take_line()
 {
-	FILE *fp == NULL;
+	FILE *fp = NULL;
 	char *line = NULL;
 	size_t len = 0;
 	/* Open file for writing*/
@@ -24,8 +24,8 @@ getline(&line, &len, stdin);
 /* Write the line to the file*/
 fprintf(fp, "%s", line);
 /* Close the file and free memory*/
-return (line);
 fclose(fp);
+return (line);
 /*return (fp);*/
-free(line);
+/*free(line);*/
 }
