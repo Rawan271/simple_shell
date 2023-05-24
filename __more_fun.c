@@ -13,7 +13,7 @@ ui = 0;
 	while (src[ui])
 	{
 		dest[ui] = src[ui];
-		i++;
+		ui++;
 	}
 dest[ui] = '\0';
 return (dest);
