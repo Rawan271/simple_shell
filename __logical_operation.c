@@ -1,36 +1,4 @@
-#include <shell.h>
-
-int execute_command(char **args),
-int execute_pipeline(char **args, int num_args),
-int parse_pipeline(char *line, char **args),
-int parse_args(char *line, char **args),
-int is_logical_operator(char *token),
-int run_logical_operator(char **args, int num_args, int operator_pos)
-
-int main()
-{
-    char line[MAX_LINE_LEN];
-    char *args[MAX_ARGS];
-
-    while (1)
-    {
-        printf("$ ");
-        fflush(stdout);
-
-        if (fgets(line, MAX_LINE_LEN, stdin) == NULL)
-        {
-            break;
-        }
-
-        int num_args = parse_pipeline(line, args);
-        if (num_args > 0)
-        {
-            execute_pipeline(args, num_args);
-        }
-    }
-
-    return 0;
-}
+#include "shell.h"
 
 /**
  * Executes a single command.
@@ -189,4 +157,3 @@ int run_logical_operator(char **args, int num_args, int operator_pos)
         return status;
     }
 }
-
