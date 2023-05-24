@@ -103,28 +103,10 @@ void _prerror(char **argv, int c, char **cmd);
  * @fun:fun to excute when bultin true
  */
 
-<<<<<<< HEAD
-/* Function prototypes */
-int execute_command(char **args);
-int execute_pipeline(char **args, int num_args);
-int parse_pipeline(char *line, char **args);
-int parse_args(char *line, char **args);
-int is_logical_operator(char *token);
-int run_logical_operator(char **args, int num_args, int operator_pos);
-
-void print_prompt(void);
-void read_input(char *input);
-void parse_input(char *input, char **args);
-int is_builtin(char *command);
-void handle_builtin(char **args);
-void handle_external(char **args);
-void handle_error(char *message);
-=======
 typedef struct  bulltin
 {
 	char *command;
 	int (*fun)(char **line, int er);
 } bul_t;
->>>>>>> 1d2743e0d9b9b3a40f7b97f68a3f7cbd5eccc4f3
 
 #endif
