@@ -1,7 +1,11 @@
 .TH man 1 "24 May 2023" "0.20" "HSH man page"
 .SH NAME
 .B hsh
+<<<<<<< HEAD
 - Simple Shell Studying purpose
+=======
+- Simple Shell Studying purpose Holberton School
+>>>>>>> 89b1dda8cb229e954d31d2385710cb3b154a7699
 .SH SYNOPSIS
 .B ./hsh
 [command] [options] [FILE]
@@ -13,7 +17,12 @@ is Copyright (C) Ahmed Belhaj  and licensed under the MIT license.
 (Simple Shell) is an end of semester project for students at Holberton School where we expore,
 understand and build a working functional simple shell program.
 .B Overview
+<<<<<<< HEAD
 The simpleshell is a simplified iteration of a command line interpreter, similar to
+=======
+
+The simple shell is a simplified iteration of a command line interpreter, similar to
+>>>>>>> 89b1dda8cb229e954d31d2385710cb3b154a7699
 .B bash or
 .B dash.
 .I FORMAT [ARGUMENT]...
@@ -54,13 +63,22 @@ $
 .SH RESERVED WORDS
 .B exit:
 quits the program, exits the shell.
+<<<<<<< HEAD
+=======
+
+>>>>>>> 89b1dda8cb229e954d31d2385710cb3b154a7699
 .B env:
 prints the environment variables
 .SH HISTORY
 The
 .B history
+<<<<<<< HEAD
 built-in displays the history list, one command per line, preceded with line
 numbers, starting with 0. On exit the entire history is written to a file named
+=======
+built-in displays the history list, one command per line, preceded with line numbers, starting
+with 0. On exit the entire history is written to a file named
+>>>>>>> 89b1dda8cb229e954d31d2385710cb3b154a7699
 .I simple_shell_history
 in the
 .I $HOME
